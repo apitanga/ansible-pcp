@@ -6,7 +6,7 @@ Installs, enables and starts pmloger and pmcd.
 Requirements
 ------------
 
-Requires RHEL7 and all system must have the pcp RPM package available to it via some yum repo.
+Requires RHEL7.2 and each host must have the pcp RPM package available to it via some yum repo.
 
 Role Variables
 --------------
