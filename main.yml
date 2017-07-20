@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+  tasks:
+  
+    - name: Install pcp
+      yum: name=pcp state=installed
+      
+    - name: Enable and start collector and listener
+      service: name={{ item }} state=started enabled=yes
+      with_items:
+       - pmcd
+       - pmlogger
+       
+     - name: insert firewalld rule
+       firewalld:
+         service: pmcd
+         permanent: true
+         state: enabled
+         zone: public
+       ignore_errors: yes
