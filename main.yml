@@ -13,4 +13,4 @@
        - pmlogger
        
     - name: Insert firewalld rule
-      firewalld: service=pmcd permanent=true state=enabled zone=public
+      firewalld: service=pmcd permanent=true state=enabled zone=public immediate=true
