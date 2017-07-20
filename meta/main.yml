@@ -2,7 +2,7 @@
 galaxy_info:
   author: "Andre Pitanga"
   company: Red Hat
-  license: license (GL)
+  license: GPL
   min_ansible_version: 1.4 
   platforms:
    - name: EL
