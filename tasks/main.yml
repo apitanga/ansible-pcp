@@ -1,0 +1,9 @@
+---
+- name: Install pcp
+  yum: name=pcp state=installed
+    
+- name: Enable and start collector and listener
+  service: name={{ item }} state=started enabled=yes
+  with_items:
+   - pmcd
+   - pmlogger
