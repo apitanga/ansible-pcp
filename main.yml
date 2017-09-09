@@ -11,6 +11,3 @@
       with_items:
        - pmcd
        - pmlogger
-       
-    - name: Insert firewalld rule
-      firewalld: service=pmcd permanent=true state=enabled zone=public immediate=true
