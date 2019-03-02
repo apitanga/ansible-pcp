@@ -16,4 +16,4 @@
     group: root
     mode: 0644
   notify: restart pmlogger
-  when: logging_interval is defined  
+  when: pcp_logging_interval is defined  
