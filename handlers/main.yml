@@ -1,5 +1,8 @@
 - name: restart pmlogger
   systemd:
     state: restarted
-    daemon_reload: yes
     name: pmlogger
+- name: restart pmcd
+  systemd:
+    state: restarted
+    name: pmcd
