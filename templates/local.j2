@@ -23,7 +23,7 @@ $version=1.1
 #Host           P?  S?  directory                               args
 
 # local primary logger
-{% if logging_interval is defined %}
+{% if pcp_logging_interval is defined %}
 LOCALHOSTNAME   y   n   PCP_LOG_DIR/pmlogger/LOCALHOSTNAME      -r -T24h10m -c config.default -v 100Mb -t {{ pcp_logging_interval }}s
 {% else %}
 LOCALHOSTNAME   y   n   PCP_LOG_DIR/pmlogger/LOCALHOSTNAME      -r -T24h10m -c config.default -v 100Mb
