@@ -4,7 +4,7 @@ galaxy_info:
   company: Red Hat
   description: Installs, enables and starts pmlogger and pmcd
   license: GPL
-  min_ansible_version: 1.4 
+  min_ansible_version: 1.4
   platforms:
    - name: EL
      versions:
