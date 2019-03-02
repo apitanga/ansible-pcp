@@ -5,7 +5,7 @@
   until: task_result is success
   retries: 10
   delay: 2
-  
+
 - name: Enable and start collector and listener
   service: name={{ item }} state=started enabled=yes
   with_items:
