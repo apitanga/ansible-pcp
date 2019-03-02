@@ -12,7 +12,7 @@
    - pmcd
    - pmlogger
 
-- name: Deploy template
+- name: Deploy pmlogger template
   template:
     src: templates/local.j2
     dest: /etc/pcp/pmlogger/control.d/local
@@ -21,3 +21,13 @@
     mode: 0644
   notify: restart pmlogger
   when: pcp_logging_interval is defined
+
+- name: Deploy pmcd template
+  template:
+    src: templates/pmcd.j2
+    dest: /etc/pcp/pmcd/pmcd.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart pmcd
+  when: pcp_remote_hosts is defined 
