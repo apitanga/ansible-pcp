@@ -11,7 +11,7 @@ Host must have the pcp RPM packages available to it via some yum repo (i.e. rhel
 Role Variables
 --------------
 
-None.
+(Optional) `logging_interval` changes logging (sampling) interval from default 60 seconds.
 
 Dependencies
 ------------
