@@ -1,7 +1,7 @@
 ---
 - name: Install pcp
   yum: name=pcp state=installed
-    
+
 - name: Enable and start collector and listener
   service: name={{ item }} state=started enabled=yes
   with_items:
@@ -9,11 +9,11 @@
    - pmlogger
 
 - name: Deploy template
-  template: 
+  template:
     src: templates/local.j2
     dest: /etc/pcp/pmlogger/control.d/local
     owner: root
     group: root
     mode: 0644
   notify: restart pmlogger
-  when: pcp_logging_interval is defined  
+  when: pcp_logging_interval is defined
