@@ -1,7 +1,7 @@
 PCP
 ===
 
-Installs, enables and starts pmloger and pmcd.
+Installs, enables and starts pmlogger and pmcd.
 
 Requirements
 ------------
