@@ -24,7 +24,7 @@ $version=1.1
 
 # local primary logger
 {% if logging_interval is defined %}
-LOCALHOSTNAME   y   n   PCP_LOG_DIR/pmlogger/LOCALHOSTNAME      -r -T24h10m -c config.default -v 100Mb -t {{ logging_interval }}s
+LOCALHOSTNAME   y   n   PCP_LOG_DIR/pmlogger/LOCALHOSTNAME      -r -T24h10m -c config.default -v 100Mb -t {{ pcp_logging_interval }}s
 {% else %}
 LOCALHOSTNAME   y   n   PCP_LOG_DIR/pmlogger/LOCALHOSTNAME      -r -T24h10m -c config.default -v 100Mb
 {% endif %}
