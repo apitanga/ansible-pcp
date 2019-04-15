@@ -15,7 +15,7 @@ jbd2    122     dso     jbd2_init       /var/lib/pcp/pmdas/jbd2/pmda_jbd2.so
 disallow ".*" : all;
 disallow ":*" : all;
 {% for remote_host in pcp_remote_hosts %}
-allow "{{ remote_host }}" : fetch
+allow "{{ remote_host }}" : fetch;
 {% endfor %}
 {% else %}
 disallow ".*" : store;
